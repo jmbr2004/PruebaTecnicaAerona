@@ -1,7 +1,7 @@
 Aeronatica
 Un proyecto donde se ejemplifica el uso del patrón PageObjec usando serenity  BDD con cucumber y gradle.
 
-Las pruebas de este ejemplo se corren contra la página web https://automation-wappi.vercel.app/.
+Las pruebas de este ejemplo se corren contra la página web https://www.aerocivil.gov.co/
 
 Por defecto, los tests corren en Chrome, así que es necesario tener instalada la versión del chrome driver del equipo donde se correrá y tenerla agregada en la ruta del proyecto
 \src\test\resources\webdriver
