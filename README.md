@@ -1,35 +1,55 @@
-# Serenity JUnit Starter project
+Aeronatica
+Un proyecto donde se ejemplifica el uso del patrón PageObjec usando serenity  BDD con cucumber y gradle.
 
+Las pruebas de este ejemplo se corren contra la página web https://automation-wappi.vercel.app/.
 
-This is the simplest possible build script setup for Serenity BDD using Java. 
+Por defecto, los tests corren en Chrome, así que es necesario tener instalada la versión del chrome driver del equipo donde se correrá y tenerla agregada en la ruta del proyecto
+\src\test\resources\webdriver
+La estructura completa del proyecto es la siguiente:
 
-This is a very minimal sample project using JUnit and Serenity BDD in Java. 
-You can use this project as a quick starting point for your own projects.
++ model:
+    Clases que usan el patrón Page object builder o relcionadas con el modelo de dominio
++ stepsDefinitions:
+    Clase que representan tareas que realiza el actor a nivel de proceso de negocio
++ steps:
+    Clase que permite la comunicacion entre los features de cucumbre y las clases del patron Page Object 
++ interacion: 
+    Clases que representan las interacciones directas con la interfaz de usuario
++ validación de Resultados: (clases que  que contiene la palabra resultado)
+    Clases que representan las validaciones de los resultados de los tests.  
++ user_interface:
+    Page Objects y Page Elements. Mapean los objetos de la interfaz de usuario
++ features:
+    Archivo de cucumber con la definición de los casos de prueba de la aplicación Wappi
+    
+Requerimientos:
+Para correr el proyecto se necesita Java JDK 1.8 y Gradle preferiblemente con la versión 4.7.
 
-## Get the code
+Para correr el proyecto:
+clean test aggregate es el comando que correrá los tests y generará el reporte en la carpeta /target/site/serenity/
+
+## repositorio 
 
 Git:
+    
+   
 
-    git clone https://github.com/serenity-bdd/serenity-junit-starter.git
-    cd serenity-junit-starter
 
 
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+## Use Maven:
 
-## Use Maven
-
-Open a command window and run:
+Abrir el commando window y correr:
 
     mvn clean verify
 
-## Use Gradle
+## Use Gradle:
 
-Open a command window and run:
+Abrir el commando window y correr:
 
     gradlew test 
 
 
-## Viewing the reports
+## Visualizando los reportes:
+Los comandos mencionados anteriormente generaran el reporte de Serenity test en el directorio `target/site/serenity` 
 
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
 
